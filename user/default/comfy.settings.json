@@ -1,5 +1,7 @@
 {
     "Comfy.Queue.History.Expanded": false,
     "Comfy.RightSidePanel.IsOpen": false,
-    "Comfy.Minimap.Visible": false
+    "Comfy.Minimap.Visible": false,
+    "Comfy.InstalledVersion": "1.39.14",
+    "Comfy.TutorialCompleted": true
 }
