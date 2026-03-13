@@ -1,3 +1,6 @@
 [submodule "custom_nodes/ComfyUI-Image-Compressor"]
 	path = custom_nodes/ComfyUI-Image-Compressor
 	url = https://github.com/liuqianhonga/ComfyUI-Image-Compressor.git
+[submodule "custom_nodes/ComfyUI-KJNodes"]
+	path = custom_nodes/ComfyUI-KJNodes
+	url = https://github.com/kijai/ComfyUI-KJNodes.git
