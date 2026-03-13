@@ -34,10 +34,10 @@ class ImageSizeTransformer:
         
         if is_orientation_change:
             instruction = (f"将原图从 {w}x{h} 调整为 {target_width}x{target_height}。"
-                           f"这是一次横竖版式转换，请在改变尺寸的同时，严格保持原图的视觉风格、主体内容和构图逻辑一致，避免画面拉伸或内容丢失。")
+                           f"这是一次横竖版式转换，请在改变尺寸的同时，严格保持原图的视觉风格、主体内容和构图逻辑一致，避免画面拉伸或内容丢失。\n")
         else:
             instruction = (f"将原图从 {w}x{h} 调整为 {target_width}x{target_height}。"
-                           f"这是一次缩放处理，请在改变尺寸的同时，确保画面清晰，并完美保留原图的风格、细节和主体内容。")
+                           f"这是一次缩放处理，请在改变尺寸的同时，确保画面清晰，并完美保留原图的风格、细节和主体内容。\n")
 
         return (instruction, closest_ratio)
 
