@@ -865,25 +865,8 @@ class GeminiNanoBanana2(IO.ComfyNode):
                     "can cause variations in the response even when you use the same seed value. "
                     "By default, a random seed value is used.",
                 ),
-                IO.Combo.Input(
+                IO.String.Input(
                     "aspect_ratio",
-                    options=[
-                        "auto",
-                        "1:1",
-                        "2:3",
-                        "3:2",
-                        "3:4",
-                        "4:3",
-                        "4:5",
-                        "5:4",
-                        "9:16",
-                        "16:9",
-                        "21:9",
-                        # "1:4",
-                        # "4:1",
-                        # "8:1",
-                        # "1:8",
-                    ],
                     default="auto",
                     tooltip="If set to 'auto', matches your input image's aspect ratio; "
                     "if no image is provided, a 16:9 square is usually generated.",
