@@ -42,12 +42,50 @@ class ImageSizeTransformer:
         return (instruction, closest_ratio)
 
 
+class TextSplitter:
+    """
+    将输入文本按指定分隔符切分为最多5段，不足的部分返回空字符串。
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "text": ("STRING", {
+                    "multiline": True,
+                    "default": ""
+                }),
+                "separator": ("STRING", {
+                    "multiline": False,
+                    "default": ","
+                }),
+            },
+        }
+
+    RETURN_TYPES = ("STRING",) * 5
+    RETURN_NAMES = tuple(f"segment_{i+1}" for i in range(5))
+    FUNCTION = "split"
+    CATEGORY = "SlowAI"
+
+    def split(self, text, separator):
+        # 按分隔符切分，maxsplit=4 得到最多5个元素
+        parts = text.split(separator, 4)
+
+        # 补足到5个，不足部分为空字符串
+        if len(parts) < 5:
+            parts.extend([""] * (5 - len(parts)))
+
+        return tuple(parts[:5])
+
+
 
 # 节点注册
 NODE_CLASS_MAPPINGS = {
     "ImageSizeTransformer": ImageSizeTransformer,
+    "TextSplitter": TextSplitter,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageSizeTransformer": "ImageSizeTransformer",
+    "TextSplitter": "TextSplitter",
 }
