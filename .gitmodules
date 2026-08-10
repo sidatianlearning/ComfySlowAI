@@ -4,3 +4,6 @@
 [submodule "custom_nodes/ComfyUI-KJNodes"]
 	path = custom_nodes/ComfyUI-KJNodes
 	url = https://github.com/kijai/ComfyUI-KJNodes.git
+[submodule "custom_nodes/ComfyUI-VideoHelperSuite"]
+	path = custom_nodes/ComfyUI-VideoHelperSuite
+	url = https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
