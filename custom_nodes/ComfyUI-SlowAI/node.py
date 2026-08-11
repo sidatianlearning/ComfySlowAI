@@ -7,7 +7,7 @@ from fractions import Fraction
 from comfy_api.latest import io, InputImpl, Types
 import comfy.utils
 import torch
-
+from .asset import AssetSaveImage, AssetList, AssetLoadImage
 
 class ImageSizeTransformer:
     @classmethod
@@ -391,6 +391,9 @@ NODE_CLASS_MAPPINGS = {
     "VideoSplit": VideoSplit,
     "VideoConcat": VideoConcat,
     "VideoDownsize": VideoDownsize,
+    "AssetSaveImage": AssetSaveImage,
+    "AssetList":      AssetList,
+    "AssetLoadImage": AssetLoadImage,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -399,4 +402,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "VideoSplit": "VideoSplit",
     "VideoConcat": "VideoConcat",
     "VideoDownsize": "VideoDownsize",
+    "AssetSaveImage": "资产-保存图片",
+    "AssetList":      "资产-检索",
+    "AssetLoadImage": "资产-加载图片",
 }
